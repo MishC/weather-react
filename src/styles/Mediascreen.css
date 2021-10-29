@@ -1,0 +1,80 @@
+@media only screen and (max-width: 780px) {
+  ul,
+  li {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .row1,
+  .row2 {
+    margin: auto;
+  }
+
+  .text {
+    font-size: smaller;
+  }
+
+  h6 {
+    text-align: center;
+    font-weight: 700;
+  }
+
+  body {
+    width: 100%;
+    margin: 20px auto;
+  }
+  .container {
+    width: 100%;
+  }
+  #type {
+    min-width: 150px;
+    margin: 0px;
+    position: relative;
+  }
+  .btn {
+    position: relative;
+    left: auto;
+  }
+  li.temp {
+    font-size: 35px;
+  }
+  span.city {
+    position: static;
+    float: none;
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  span.units > a {
+    font-size: 20px;
+  }
+  span.units {
+    font-size: 20px;
+    position: relative;
+    top: -5px;
+  }
+
+  ul.strip li {
+    display: block;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .SearchBar .row {
+    padding: 0 0 0 50px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .SearchBar .row {
+    padding: 0 0 0 20px;
+  }
+  .SearchBar .col-5 {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 290px) {
+  .SearchBar .row {
+    padding: 0;
+  }
+}

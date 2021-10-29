@@ -1,0 +1,105 @@
+ul.strip {
+  background: #1ab2a8;
+  font-weight: 600;
+  color: #fff;
+  margin: 0px;
+  padding: 6px 20px;
+  border-radius: 0px;
+  text-align: start;
+}
+.Weather ul.strip1 {
+  margin: 30px 0px 0px 0px;
+}
+
+ul.strip li {
+  font-size: 18px;
+  display: inline;
+  padding: 0;
+}
+.Weather ul.temperature {
+  margin: 0;
+}
+
+.Weather ul.card-text {
+  text-align: left;
+  list-style-type: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: -5px;
+  letter-spacing: -0.5px;
+}
+span.city,
+span.country {
+  font-weight: 600;
+  font-size: 20px;
+  color: #50ffa9;
+  letter-spacing: 0.1rem;
+  position: relative;
+  float: right;
+  right: auto;
+}
+span.city:hover,
+span.country:hover {
+  color: #fff;
+}
+
+span.units {
+  vertical-align: super;
+  color: #1ab2a8;
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+}
+span.units > a {
+  color: #1ab2a8;
+  text-decoration: none;
+}
+.temperature {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.temperature > li {
+  display: inline;
+}
+
+img {
+  filter: contrast(90%);
+}
+img.icon {
+  padding: 0;
+  margin-top: -20px;
+  filter: contrast(90%);
+}
+
+.dispay-none {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  li.temp {
+    font-size: 35px;
+  }
+  span.city {
+    position: static;
+    float: none;
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  span.units > a {
+    font-size: 20px;
+  }
+  span.units {
+    font-size: 20px;
+    position: relative;
+    top: -5px;
+  }
+
+  ul.strip li {
+    display: block;
+    text-align: center;
+  }
+}
