@@ -27,57 +27,10 @@ export default function Weather(props) {
     setStyleF({ color: "#1ab2a8" });
   }
 
-  /**__________**/
-  function currentDate(now) {
-    let day = now.getDay(); //Day of the week, number 0-6
-    let month = now.getMonth(); //current month, number of 0-11
-    let hours = now.getHours(); //hour, number of 0-24
-    if (hours < 10) {
-      hours = `0${hours}`;
-    }
-    let minutes = now.getMinutes(); //hour, number of 0-59
-    if (minutes < 10) {
-      minutes = `0${minutes}`;
-    }
-    let dayToday = now.getUTCDate();
-    let dayWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    let months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    let weekDay = dayWeek[day];
-    let currentMonth = months[month];
-    let time = hours + ":" + minutes;
-    let suff = "";
-    if (dayToday === 1) {
-      suff = "st";
-    } else if (dayToday === 2) {
-      suff = "nd";
-    } else if (dayToday === 3) {
-      suff = "rd";
-    } else {
-      suff = "th";
-    }
-    return `${weekDay} ${dayToday}${suff} of ${currentMonth},
-    ${time}`;
-  }
-  let now = new Date();
-
-  let date = useState(currentDate(now));
   return (
     <div className="result Weather">
       <ul className="strip strip1">
-        <li>{date}</li>
+        <li>{props.date}</li>
         <li>
           <span className="city">
             {props.city} ({props.country})

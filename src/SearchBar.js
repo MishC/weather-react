@@ -21,6 +21,52 @@ export default function SearchBar(prop) {
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
+  /**__________**/
+  function currentDate(now) {
+    let day = now.getDay(); //Day of the week, number 0-6
+    let month = now.getMonth(); //current month, number of 0-11
+    let hours = now.getHours(); //hour, number of 0-24
+    if (hours < 10) {
+      hours = `0${hours}`;
+    }
+    let minutes = now.getMinutes(); //hour, number of 0-59
+    if (minutes < 10) {
+      minutes = `0${minutes}`;
+    }
+    let dayToday = now.getUTCDate();
+    let dayWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    let weekDay = dayWeek[day];
+    let currentMonth = months[month];
+    let time = hours + ":" + minutes;
+    let suff = "";
+    if (dayToday === 1) {
+      suff = "st";
+    } else if (dayToday === 2) {
+      suff = "nd";
+    } else if (dayToday === 3) {
+      suff = "rd";
+    } else {
+      suff = "th";
+    }
+    return `${weekDay} ${dayToday}${suff} of ${currentMonth},
+    ${time}`;
+  }
+  let now = new Date();
+  let [date, setDate] = useState(currentDate(now));
 
   function handleSearch(event) {
     //event.preventDefault();
@@ -56,6 +102,9 @@ export default function SearchBar(prop) {
     setPrecipitation(Math.round(response.data.list[0].pop));
     setWind(Math.round(response.data.list[0].wind.speed));
     setHumidity(response.data.list[0].main.humidity);
+    let now = new Date();
+
+    setDate(currentDate(now));
   }
 
   return (
@@ -95,6 +144,7 @@ export default function SearchBar(prop) {
         precipitation={precipitation}
         wind={wind}
         humidity={humidity}
+        date={date}
         error={error}
       />
     </div>
