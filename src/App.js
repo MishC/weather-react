@@ -20,9 +20,8 @@ export default function App() {
     const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
     axios.get(url).then(handleDefault);
   }
-  // function getCurrentCity(event) {
-  // event.preventDefault();
-  console.log(defaultCity);
+
+  //console.log(defaultCity);
   if (defaultCity) {
     return (
       <div className="App">
