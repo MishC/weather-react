@@ -26,22 +26,28 @@ img.iconic {
   width: fit-content;
 }
 .row {
+  --bs-gutter-x: 0;
+
   vertical-align: middle;
   padding: 0;
   margin: 0 auto;
 }
 
 .row1 {
+  --bs-gutter-x: 0;
+
   text-align: center;
   min-width: 175px;
   padding: 20px 0px;
 }
 .row.row1 {
+  --bs-gutter-x: 0;
   border: 1px solid #1ab2a8;
   border-radius: 0px;
   padding: 0;
 }
 .row.row2 {
+  --bs-gutter-x: 0;
   border: 1px solid #1ab2a8;
   border-radius: 0px;
   padding: 0;
@@ -52,6 +58,7 @@ img.iconic {
   margin: 0;
 }
 .row2 {
+  --bs-gutter-x: 0;
   text-align: center;
   vertical-align: middle;
   margin: 0px 0px;
@@ -72,9 +79,8 @@ img.iconic {
   border: 0px;
 }
 .card.sm-2 {
-  width: 4rem;
+  min-width: 140px;
   border: 0px;
-  padding: 10px 10px;
   margin: 0 auto;
 }
 
