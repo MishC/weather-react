@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
 }
+.SearchBar form {
+  margin-bottom: 4em;
+}
 .SearchBar .form-group {
   text-align: center;
   margin: 0 auto;

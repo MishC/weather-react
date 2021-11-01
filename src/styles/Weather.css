@@ -71,9 +71,14 @@ img.icon {
   margin-top: -20px;
   filter: contrast(90%);
 }
-
+.iconic {
+  line-height: 15px;
+}
 .dispay-none {
   display: none;
+}
+.Weather .card-title {
+  margin: 0px;
 }
 
 @media only screen and (max-width: 800px) {
