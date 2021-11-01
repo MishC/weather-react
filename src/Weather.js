@@ -60,7 +60,7 @@ export default function Weather(props) {
             <img src={props.icon} alt={props.description} className="icon" />
           </h1>
           <footer>
-            <h6 className="iconic">{props.description}</h6>
+            <h6 className="iconic text-capitalize">{props.description}</h6>
           </footer>
         </div>
         <div className="col-2 col-md-2 col-sm-auto row1">
