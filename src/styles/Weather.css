@@ -17,7 +17,7 @@ ul.strip li {
   padding: 0;
 }
 .Weather ul.temperature {
-  margin: 0;
+  margin: 12px 0 0 0;
 }
 
 .Weather ul.card-text {

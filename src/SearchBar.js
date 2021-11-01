@@ -4,8 +4,8 @@ import "./styles/SearchBar.css";
 import axios from "axios";
 import "./styles/Mediascreen.css";
 
-export default function SearchBar(props) {
-  const [city, setCity] = useState(props.defaultCity);
+export default function SearchBar(prop) {
+  const [city, setCity] = useState(prop.defaultCity);
   const [weatherData, setWeatherData] = useState({
     ready: false,
     temperature: null,
@@ -16,19 +16,9 @@ export default function SearchBar(props) {
     humidity: null,
     date: "",
     country: "",
+    city: "",
   });
-  /*let [city, setCity] = useState("");
-  let [country, setCountry] = useState("");
-  //let [time, setTime]=useState("");
-  const [temperature, setTemperature] = useState(null);
-  let [precipitation, setPrecipitation] = useState(null);
-  let [wind, setWind] = useState(null);
-  let [humidity, setHumidity] = useState("");
-  let [description, setDescription] = useState("");
-  let [icon, setIcon] = useState("");
-  let [date, setDate] = useState("");
-  const [loaded, setLoaded] = useState(false);
-  const [error, setError] = useState();*/
+
   /*_______________________________*/
   /*_______________________________*/
   function currentDate(now) {
@@ -94,7 +84,7 @@ export default function SearchBar(props) {
   function handleResponse(response) {
     //console.log(response.data);
     let now = new Date();
-    setCity(response.data.city.name);
+    //setCity(response.data.city.name);
 
     setWeatherData({
       ready: true,
@@ -142,7 +132,7 @@ export default function SearchBar(props) {
           </div>
         </form>
         <Weather
-          city={city}
+          city={weatherData.city}
           country={weatherData.country}
           temperature={weatherData.temperature}
           icon={weatherData.icon}
