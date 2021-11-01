@@ -32,7 +32,7 @@ export default function Weather(props) {
       <ul className="strip strip1">
         <li>{props.date}</li>
         <li>
-          <span className="city">
+          <span className="city text-uppercase">
             {props.city} ({props.country})
           </span>
         </li>
