@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+//import WeatherTemperature from "./WeatherTemperature";
 
 import "./styles/Weather.css";
 import "./styles/Mediascreen.css";
@@ -40,10 +41,11 @@ export default function Weather(props) {
       <div className="row row1">
         <div className="col-3 offset-lg-1 offset-md-1 col-sm-auto row1">
           <ul className="temperature">
-            <li className="temp">{props.temperature}</li>
+            <li className="temp">{Math.round(props.temperature)}</li>
             <li>
               <span className="units">
-                <a href="/" onClick={convertToCelsius} style={styleC}>
+                <a href="/" style={styleC} onClick={convertToCelsius}>
+                  {props.celsius}
                   °C{" "}
                 </a>
                 /

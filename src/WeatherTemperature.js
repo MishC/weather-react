@@ -23,10 +23,11 @@ export default function WeatherTemperature(props) {
 
     return (
       <ul className="temperature">
-        <li className="temp">{props.celsius}</li>
+        <li className="temp">{Math.round(props.celsius)}</li>
         <li>
           <span className="units">
             <a href="/" style={styleC}>
+              {props.celsius}
               °C{" "}
             </a>
             /
@@ -38,17 +39,16 @@ export default function WeatherTemperature(props) {
       </ul>
     );
   } else {
-    let fahrenheit = Math.round((props.celsius * 9) / 5 + 32);
     return (
       <ul className="temperature">
-        <li className="temp">{fahrenheit}</li>
+        <li className="temp"> {Math.round((props.celsius * 9) / 5 + 32)}</li>
         <li>
           <span className="units">
             <a href="/" onClick={convertToCelsius} style={styleC}>
               °C{" "}
             </a>
             /
-            <a href="/" style={styleF}>
+            <a href="/" style={styleF} non>
               °F
             </a>
           </span>
@@ -57,27 +57,3 @@ export default function WeatherTemperature(props) {
     );
   }
 }
-
-/*
- function convertToFahrenheit(event) {
-    event.preventDefault();
-    // let temperatureF = Math.round((props.temperature * 9) / 5 + 32);
-
-    //setTemp(temperatureF);
-
-    console.log(props.temperature);
-    setStyleF({ color: "#D67256" });
-    setStyleC({ color: "#1ab2a8" });
-  }
-
-  function convertToCelsius(event) {
-    event.preventDefault();
-
-    // setTemp(props.temperature);
-    setStyleC({ color: "#D67256" });
-    setStyleF({ color: "#1ab2a8" });
-  }
-
-
-
-*/

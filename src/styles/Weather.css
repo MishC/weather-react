@@ -17,7 +17,7 @@ ul.strip li {
   padding: 0;
 }
 .Weather ul.temperature {
-  margin: 12px 0 0 0;
+  margin: 0 0 0 0;
 }
 
 .Weather ul.card-text {
@@ -56,8 +56,8 @@ span.units > a {
   text-decoration: none;
 }
 .temperature {
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 62px;
+  font-weight: 600;
 }
 
 .temperature > li {
