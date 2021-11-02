@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 import Forecast from "./Forecast";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 
 import "./styles/App.css";
 import "./styles/Mediascreen.css";
@@ -39,6 +40,11 @@ export default function App() {
     /*Deploying retrievePosition - Default*/
 
     navigator.geolocation.getCurrentPosition(retrievePosition);
-    return <h1>Loading...</h1>;
+    return (
+      <div className="loader">
+        {" "}
+        <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
+      </div>
+    );
   }
 }
