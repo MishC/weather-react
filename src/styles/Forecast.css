@@ -6,3 +6,8 @@
   padding: 6px 20px;
   border-radius: 0px;
 }
+
+.Forecast p {
+  margin-top: 5px;
+  text-align: left;
+}

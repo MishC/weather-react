@@ -106,6 +106,12 @@ export default function Forecast() {
           </div>
         </div>
       </div>
+
+      <p>
+        This project was coded by MishC and is open-sourced on{" "}
+        <a href="https://github.com/MishC/weather-react">GitHub</a> and hosted
+        on <a href="https://weather-react-mishc.netlify.app/">Netlify</a>.
+      </p>
     </div>
   );
 }
