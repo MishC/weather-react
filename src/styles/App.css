@@ -38,6 +38,10 @@ img.iconic {
   padding: 0;
   margin: 0 auto;
 }
+.row1,
+.row2 {
+  margin: auto;
+}
 
 .row1 {
   --bs-gutter-x: 0;
