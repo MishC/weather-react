@@ -14,6 +14,6 @@
 }
 
 .Forecast .forecast-night {
-  opacity: 40%;
+  opacity: 0.4;
   margin-left: 8px;
 }
