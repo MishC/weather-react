@@ -86,9 +86,7 @@ export default function SearchBar(prop) {
     axios.get(urlCity).then(handleResponse);
   }
   function handleResponse(response) {
-    //console.log(response.data);
     let now = new Date();
-    //setCity(response.data.city.name);
 
     setWeatherData({
       ready: true,
@@ -105,6 +103,11 @@ export default function SearchBar(prop) {
       date: currentDate(now),
       coordinates: response.data.city.coord,
     });
+  }
+  function Search() {
+    let apiKey = "35022efb71ba6d400064d158d8238b4b";
+    let urlCity = `https://api.openweathermap.org/data/2.5/forecast/?q=${city}&units=metric&APPID=${apiKey}`;
+    axios.get(urlCity).then(handleResponse);
   }
   /*______________________*/
   if (weatherData.ready) {
@@ -151,9 +154,7 @@ export default function SearchBar(prop) {
       </div>
     );
   } else {
-    let apiKey = "35022efb71ba6d400064d158d8238b4b";
-    let urlCity = `https://api.openweathermap.org/data/2.5/forecast/?q=${city}&units=metric&APPID=${apiKey}`;
-    axios.get(urlCity).then(handleResponse);
+    Search();
     return null;
   }
 }
