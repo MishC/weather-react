@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/Forecast.css";
 import "./styles/Mediascreen.css";
 
-export default function Forecast() {
+export default function Forecast(props) {
   return (
     <div className="result Forecast">
       <ul className="strip">

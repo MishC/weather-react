@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Weather from "./Weather";
+import Forecast from "./Forecast";
+
 import "./styles/SearchBar.css";
+
 import axios from "axios";
 import "./styles/Mediascreen.css";
 
@@ -17,6 +20,7 @@ export default function SearchBar(prop) {
     date: "",
     country: "",
     city: "",
+    coordinates: {},
   });
 
   /*_______________________________*/
@@ -99,6 +103,7 @@ export default function SearchBar(prop) {
       humidity: response.data.list[0].main.humidity,
 
       date: currentDate(now),
+      coordinates: response.data.city.coord,
     });
   }
   /*______________________*/
@@ -142,6 +147,7 @@ export default function SearchBar(prop) {
           humidity={weatherData.humidity}
           date={weatherData.date}
         />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {

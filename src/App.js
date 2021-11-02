@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
-import Forecast from "./Forecast";
 import axios from "axios";
 import Loader from "react-loader-spinner";
 
@@ -30,7 +29,6 @@ export default function App() {
           <div className="card main">
             <div className="card-body">
               <SearchBar defaultCity={defaultCity} />
-              <Forecast />
             </div>
           </div>
         </div>
