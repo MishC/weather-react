@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-//import WeatherTemperature from "./WeatherTemperature";
+import React from "react";
+import WeatherTemperature from "./WeatherTemperature";
 
 import "./styles/Weather.css";
 import "./styles/Mediascreen.css";
 
 export default function Weather(props) {
-  let [styleC, setStyleC] = useState({ color: "#1ab2a8" });
+  /* let [styleC, setStyleC] = useState({ color: "#1ab2a8" });
   let [styleF, setStyleF] = useState({ color: "#1ab2a8" });
   //let [temp, setTemp] = useState(props.temperature);
 
@@ -25,7 +25,7 @@ export default function Weather(props) {
     // setTemp(props.temperature);
     setStyleC({ color: "#D67256" });
     setStyleF({ color: "#1ab2a8" });
-  }
+  }*/
 
   return (
     <div className="result Weather">
@@ -40,21 +40,7 @@ export default function Weather(props) {
 
       <div className="row row1">
         <div className="col-3 offset-lg-1 offset-md-1 col-sm-auto row1">
-          <ul className="temperature">
-            <li className="temp">{Math.round(props.temperature)}</li>
-            <li>
-              <span className="units">
-                <a href="/" style={styleC} onClick={convertToCelsius}>
-                  {props.celsius}
-                  °C{" "}
-                </a>
-                /
-                <a href="/" onClick={convertToFahrenheit} style={styleF}>
-                  °F
-                </a>
-              </span>
-            </li>
-          </ul>
+          <WeatherTemperature temperature={props.temperature} />
         </div>
         <div className="col-4 col-md-4 col-sm-auto row1">
           <h1 className="card-title">
