@@ -154,6 +154,6 @@ export default function SearchBar(prop) {
     let apiKey = "35022efb71ba6d400064d158d8238b4b";
     let urlCity = `https://api.openweathermap.org/data/2.5/forecast/?q=${city}&units=metric&APPID=${apiKey}`;
     axios.get(urlCity).then(handleResponse);
-    return <h3>{city} loading...</h3>;
+    return null;
   }
 }

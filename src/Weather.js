@@ -6,15 +6,14 @@ import "./styles/Mediascreen.css";
 export default function Weather(props) {
   let [styleC, setStyleC] = useState({ color: "#1ab2a8" });
   let [styleF, setStyleF] = useState({ color: "#1ab2a8" });
-  let [temp, setTemp] = useState(props.temperature);
+  //let [temp, setTemp] = useState(props.temperature);
 
   function convertToFahrenheit(event) {
     event.preventDefault();
-    let temperatureF = Math.round((props.temperature * 9) / 5 + 32);
+    //let temperatureF = Math.round((props.temperature * 9) / 5 + 32);
 
-    setTemp(temperatureF);
+    //setTemp(temperatureF);
 
-    console.log(props.temperature);
     setStyleF({ color: "#D67256" });
     setStyleC({ color: "#1ab2a8" });
   }
@@ -22,7 +21,7 @@ export default function Weather(props) {
   function convertToCelsius(event) {
     event.preventDefault();
 
-    setTemp(props.temperature);
+    // setTemp(props.temperature);
     setStyleC({ color: "#D67256" });
     setStyleF({ color: "#1ab2a8" });
   }
@@ -41,7 +40,7 @@ export default function Weather(props) {
       <div className="row row1">
         <div className="col-3 offset-lg-1 offset-md-1 col-sm-auto row1">
           <ul className="temperature">
-            <li className="temp">{temp}</li>
+            <li className="temp">{props.temperature}</li>
             <li>
               <span className="units">
                 <a href="/" onClick={convertToCelsius} style={styleC}>
