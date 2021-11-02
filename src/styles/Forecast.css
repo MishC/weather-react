@@ -12,3 +12,8 @@
   text-align: left;
   font-size: smaller;
 }
+
+.Forecast .forecast-night {
+  opacity: 40%;
+  margin-left: 8px;
+}

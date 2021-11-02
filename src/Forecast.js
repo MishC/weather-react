@@ -21,7 +21,7 @@ export default function Forecast() {
             </h1>
 
             <h6>
-              <span className="forecast">18°C</span> /
+              <span className="forecast">18°C</span>
               <span className="forecast-night">5°C</span>
             </h6>
           </div>
@@ -40,7 +40,7 @@ export default function Forecast() {
               />
             </h1>
             <h6>
-              <span className="forecast">18°C</span> /
+              <span className="forecast">18°C</span>
               <span className="forecast-night">5°C</span>
             </h6>
           </div>
@@ -60,7 +60,7 @@ export default function Forecast() {
               />
             </h1>
             <h6>
-              <span className="forecast">18°C</span> /
+              <span className="forecast">18°C</span>
               <span className="forecast-night">5°C</span>
             </h6>
           </div>
@@ -80,7 +80,7 @@ export default function Forecast() {
               />
             </h1>
             <h6>
-              <span className="forecast">18°C</span> /
+              <span className="forecast">18°C</span>
               <span className="forecast-night">5°C</span>
             </h6>
           </div>
@@ -100,7 +100,7 @@ export default function Forecast() {
               />
             </h1>
             <h6>
-              <span className="forecast">18°C</span> /
+              <span className="forecast">18°C</span>
               <span className="forecast-night">-5°C</span>
             </h6>
           </div>
