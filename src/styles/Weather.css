@@ -8,6 +8,7 @@ ul.strip {
 }
 .Weather ul.strip1 {
   margin: 30px 0px 0px 0px;
+  text-align: left;
 }
 
 ul.strip li {
@@ -23,7 +24,7 @@ ul.strip li {
   text-align: left;
   list-style-type: none;
   font-size: 16px;
-  padding: 10px 20px;
+  padding: 10px 25px;
   font-weight: 600;
   margin-top: 10px;
   letter-spacing: -0.5px;
@@ -49,7 +50,7 @@ span.country:hover {
 
 span.units {
   vertical-align: super;
-  color: #665050;
+  color: var(--bs-gray-500);
   font-size: 30px;
   padding: 0;
   margin: 0;
@@ -61,8 +62,8 @@ span.units > a {
   text-decoration: none;
 }
 .temperature {
-  font-size: 65px;
-  font-weight: 600;
+  font-size: 62px;
+  font-weight: 500;
   padding: 10px 0;
 }
 
