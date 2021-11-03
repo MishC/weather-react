@@ -1,4 +1,4 @@
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1040px) {
   ul,
   li {
     font-size: 14px;
@@ -15,8 +15,9 @@
   }
 
   h6 {
-    text-align: center;
     font-weight: 700;
+    text-align: center;
+    padding: 0;
   }
 
   body {
@@ -38,6 +39,11 @@
   li.temp {
     font-size: 45px;
   }
+  li > h6 {
+    font-weight: 700;
+    margin: 10px auto;
+  }
+
   span.city {
     position: static;
     float: none;
@@ -64,6 +70,15 @@
 @media only screen and (max-width: 600px) {
   .SearchBar .row {
     padding: 0 0 0 50px;
+  }
+  ul.card-text {
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    min-width: 190px;
+  }
+  #text {
+    text-align: left;
   }
 }
 @media only screen and (max-width: 380px) {

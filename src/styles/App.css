@@ -19,6 +19,7 @@ body,
 
 h6 {
   margin: 0px;
+  font-weight: 600;
 }
 li {
   text-decoration: none;
@@ -96,10 +97,6 @@ img.iconic {
 
 div.card-body {
   padding: 0.5em;
-}
-
-.card-text {
-  vertical-align: middle;
 }
 
 footer {

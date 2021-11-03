@@ -29,15 +29,15 @@ export default function Weather(props) {
           </footer>
         </div>
         <div className="col-lg-3 col-md-4 col-sm-4 col-sm-auto ms-3">
-          <ul className="card-text">
-            <li>
+          <ul className="card-text text-left">
+            <li className="text-left">
               <h6>Precipitation: {props.precipitation} %</h6>
             </li>
             <li>
-              <h6>Wind: {props.wind} m/s</h6>
+              <h6 className="text-left">Wind: {props.wind} m/s</h6>
             </li>
             <li>
-              <h6>Humidity: {props.humidity}%</h6>
+              <h6 className="text-left">Humidity: {props.humidity}%</h6>
             </li>
           </ul>
         </div>
