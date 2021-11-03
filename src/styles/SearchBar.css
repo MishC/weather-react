@@ -14,19 +14,19 @@
 .SearchBar .form-control {
   min-width: 100%;
   border-width: 1px;
-  border-color: #999992;
+  border-color: var(--branding-color);
 }
 .SearchBar .form-control:focus {
-  border-color: #9e9e95;
+  border-color: var(--branding-color);
   border-width: 1px;
 }
 .SearchBar .btn {
-  background: #999992;
-  color: rgb(255, 255, 255);
+  background: var(--branding-color);
+  color: var(--text-branding-color);
   margin: 0;
   font-weight: 600;
   border-width: 1px;
-  border-color: #999992;
+  border-color: var(--branding-color);
   vertical-align: middle;
   border-radius: 0%;
   margin-left: -1px;
@@ -36,8 +36,8 @@
 }
 .SearchBar .btn:visited,
 .SearchBar .btn:focus {
-  border-color: #999992;
-  background: #999992;
+  border-color: var(--branding-color);
+  background: var(--branding-color);
 }
 .SearchBar .btn:active,
 .SearchBar .btn:hover {

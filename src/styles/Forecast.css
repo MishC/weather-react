@@ -1,7 +1,7 @@
 .Forecast ul.strip {
-  background: #b1a9a9;
+  background: var(--branding-color);
   font-weight: 600;
-  color: #fff;
+  color: var(--text-branding-color);
   margin: 0px;
   padding: 3px 10px;
   border-radius: 0px;

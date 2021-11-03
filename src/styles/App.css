@@ -1,3 +1,8 @@
+:root {
+  --branding-color: #6123ff;
+  --text-branding-color: #fff;
+  --text-hover-branding: #efedef;
+}
 .App {
   text-align: center;
   width: fit-content;
