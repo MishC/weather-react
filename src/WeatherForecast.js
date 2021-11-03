@@ -1,10 +1,11 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherForecast(props) {
-  console.log(props.data);
+  //console.log(props.data);
   let date = new Date(props.data.dt * 1000);
-  let image = props.data.weather[0].icon;
-  let imageLink = `https://openweathermap.org/img/wn/${image}@2x.png`;
+  // let image = props.data.weather[0].icon;
+  //let imageLink = `https://openweathermap.org/img/wn/${image}@2x.png`;
 
   function showWeekDay(now) {
     let dayWeek = [
@@ -30,9 +31,12 @@ export default function WeatherForecast(props) {
             {date.getDay()}.{date.getMonth() + 1}.
           </span>
         </h6>
-
         <h1>
-          <img src={imageLink} className="icon-forecast" alt="" />
+          <WeatherIcon
+            code={props.data.weather[0].icon}
+            size={50}
+            animate="true"
+          />
         </h1>
         <h6>
           <span className="forecast"> {Math.round(props.data.temp.max)}°C</span>

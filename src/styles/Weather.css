@@ -51,16 +51,18 @@ span.country:hover {
 span.units {
   vertical-align: super;
   color: #1ab2a8;
-  font-size: 25px;
+  font-size: 30px;
   padding: 0;
   margin: 0;
+  position: relative;
+  top: -5px;
 }
 span.units > a {
   color: #1ab2a8;
   text-decoration: none;
 }
 .temperature {
-  font-size: 62px;
+  font-size: 72px;
   font-weight: 600;
 }
 
@@ -77,7 +79,7 @@ img.icon {
 }
 .iconic {
   position: relative;
-  top: -22px;
+  top: -5px;
 }
 .dispay-none {
   display: none;

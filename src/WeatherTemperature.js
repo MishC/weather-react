@@ -17,7 +17,7 @@ export default function WeatherTemperature(props) {
 
     setTemp(temperatureF);
 
-    setStyleF({ color: "#D67256" });
+    setStyleF({ color: "#1e1e1e" });
     setStyleC({ color: "#1ab2a8" });
   }
 
@@ -25,7 +25,7 @@ export default function WeatherTemperature(props) {
     event.preventDefault();
 
     setTemp(props.temperature);
-    setStyleC({ color: "#D67256" });
+    setStyleC({ color: "#1e1e1e" });
     setStyleF({ color: "#1ab2a8" });
   }
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherIcon from "./WeatherIcon";
 
 import "./styles/Weather.css";
 import "./styles/Mediascreen.css";
@@ -18,11 +19,11 @@ export default function Weather(props) {
 
       <div className="row row1">
         <div className="col-lg-4 offset-lg-1 col-md-3 offset-md-2 col-sm-3    col-sm-4 ">
-          <WeatherTemperature temperature={props.temperature} />
+          <WeatherTemperature temperature={props.temperature} animate={false} />
         </div>
         <div className="col-lg-2 col-md-2 col-sm-2 col-sm-auto p-0 ms-0 ">
           <h1 className="card-title">
-            <img src={props.icon} alt={props.description} className="icon" />
+            <WeatherIcon code={props.icon} size={50} />
           </h1>
           <footer>
             <h6 className="iconic text-capitalize">{props.description}</h6>

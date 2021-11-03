@@ -93,8 +93,8 @@ export default function SearchBar(prop) {
       city: response.data.city.name.toUpperCase(),
       country: response.data.city.country,
       temperature: Math.round(response.data.list[0].main.temp),
-
-      icon: `https://openweathermap.org/img/wn/${response.data.list[0].weather[0].icon}@2x.png`,
+      icon: response.data.list[0].weather[0].icon,
+      // icon: `https://openweathermap.org/img/wn/${response.data.list[0].weather[0].icon}@2x.png`,
       description: response.data.list[0].weather[0].description,
       precipitation: Math.round(response.data.list[0].pop),
       wind: Math.round(response.data.list[0].wind.speed),

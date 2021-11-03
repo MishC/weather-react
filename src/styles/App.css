@@ -80,7 +80,10 @@ img.iconic {
 }
 
 .card-title {
-  margin: 0px;
+  margin: 0;
+}
+h1.card-title > canvas {
+  margin-top: 18px;
 }
 
 .card.main {
