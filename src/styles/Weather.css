@@ -36,9 +36,9 @@ ul.strip li {
 span.city,
 span.country {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0em;
   position: relative;
   float: right;
   right: auto;

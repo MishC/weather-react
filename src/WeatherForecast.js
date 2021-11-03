@@ -35,7 +35,7 @@ export default function WeatherForecast(props) {
           <WeatherIcon
             code={props.data.weather[0].icon}
             size={50}
-            animate="true"
+            animate={true}
           />
         </h1>
         <h6>

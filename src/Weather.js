@@ -29,7 +29,7 @@ export default function Weather(props) {
             <h6 className="iconic text-capitalize">{props.description}</h6>
           </footer>
         </div>
-        <div className="col-lg-3 col-md-4 col-sm-4 col-sm-auto ms-3">
+        <div className="col-lg-4 col-md-4 col-sm-4 col-sm-auto ms-3">
           <ul className="card-text text-left">
             <li className="text-left">
               <h6>Precipitation: {props.precipitation} %</h6>
