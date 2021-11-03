@@ -22,13 +22,19 @@ export default function WeatherForecast(props) {
 
     return weekDay;
   }
+  function showDayInMonth(now) {
+    console.log(now.toUTCString().slice(5, 7));
+    if (now.toUTCString().slice(5, 6) === "0") {
+      return now.toUTCString().slice(6, 7);
+    } else return now.toUTCString().slice(5, 7);
+  }
   return (
     <div className="card col-2 sm-2 row2">
       <div className="card-body">
         <h6 className="card-title">{showWeekDay(date)}</h6>
         <h6>
           <span className="date">
-            {date.getDay()}.{date.getMonth() + 1}.
+            {showDayInMonth(date)}.{date.getMonth() + 1}.
           </span>
         </h6>
         <h1>
