@@ -13,16 +13,16 @@
 }
 .SearchBar .form-control {
   min-width: 100%;
-  border-color: #1ab2a8;
+  border-color: #777171;
   border-width: 2px;
 }
 .SearchBar .btn {
-  background: #1ab2a8;
+  background: #777171;
   color: rgb(255, 255, 255);
   margin: 0;
   font-weight: 600;
   border-width: 2px;
-  border-color: #1ab2a8;
+  border-color: #777171;
   vertical-align: middle;
   border-radius: 0%;
   margin-left: -1px;
@@ -34,8 +34,7 @@
 .SearchBar .btn:visited,
 .SearchBar .btn:active,
 .SearchBar .btn:focus {
-  background: #4ec9a4;
-  border-color: #4ec9a4;
+  background: #aaa4a4;
 }
 .Searchbar h3 {
   margin-top: 80px;

@@ -1,9 +1,9 @@
 ul.strip {
-  background: #1ab2a8;
+  background: #777171;
   font-weight: 600;
   color: #fff;
   margin: 0px;
-  padding: 6px 20px;
+  padding: 3px 10px;
   border-radius: 0px;
   text-align: start;
 }
@@ -37,7 +37,7 @@ span.city,
 span.country {
   font-weight: 600;
   font-size: 20px;
-  color: #50ffa9;
+  color: #fff;
   letter-spacing: 0.1rem;
   position: relative;
   float: right;
@@ -45,12 +45,12 @@ span.country {
 }
 span.city:hover,
 span.country:hover {
-  color: #fff;
+  color: rgb(242, 200, 200);
 }
 
 span.units {
   vertical-align: super;
-  color: #1ab2a8;
+  color: #777171;
   font-size: 30px;
   padding: 0;
   margin: 0;
@@ -58,12 +58,13 @@ span.units {
   top: -5px;
 }
 span.units > a {
-  color: #1ab2a8;
+  color: #777171;
   text-decoration: none;
 }
 .temperature {
-  font-size: 72px;
+  font-size: 65px;
   font-weight: 600;
+  padding: 10px 0;
 }
 
 .temperature > li {

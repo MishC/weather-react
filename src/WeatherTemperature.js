@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 
 export default function WeatherTemperature(props) {
-  let [styleC, setStyleC] = useState({ color: "#1ab2a8" });
-  let [styleF, setStyleF] = useState({ color: "#1ab2a8" });
+  let [styleC, setStyleC] = useState({ color: "#1e1e1e", opacity: 1 });
+  let [styleF, setStyleF] = useState({ color: "#1e1e1e", opacity: 0.4 });
   let [temp, setTemp] = useState(props.temperature);
 
   useEffect(() => {
     setTemp(props.temperature);
-    setStyleF({ color: "#1ab2a8" });
+    setStyleF({ color: "#1e1e1e", opacity: 0.4 });
   }, [props.temperature]);
 
   function convertToFahrenheit(event) {
@@ -17,16 +17,16 @@ export default function WeatherTemperature(props) {
 
     setTemp(temperatureF);
 
-    setStyleF({ color: "#1e1e1e" });
-    setStyleC({ color: "#1ab2a8" });
+    setStyleF({ color: "#1e1e1e", opacity: 1 });
+    setStyleC({ color: "#1e1e1e", opacity: 0.4 });
   }
 
   function convertToCelsius(event) {
     event.preventDefault();
 
     setTemp(props.temperature);
-    setStyleC({ color: "#1e1e1e" });
-    setStyleF({ color: "#1ab2a8" });
+    setStyleC({ color: "#1e1e1e", opacity: 1 });
+    setStyleF({ color: "##1e1e1e", opacity: 0.4 });
   }
   return (
     <ul className="temperature">
