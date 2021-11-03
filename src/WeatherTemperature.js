@@ -8,6 +8,7 @@ export default function WeatherTemperature(props) {
 
   useEffect(() => {
     setTemp(props.temperature);
+    setStyleF({ color: "#1ab2a8" });
   }, [props.temperature]);
 
   function convertToFahrenheit(event) {
