@@ -20,7 +20,7 @@ export default function Forecast(props) {
     return (
       <div className="result Forecast">
         <ul className="strip">
-          <li>Forecast for next 5 days</li>
+          <li>Forecast for next 3 days</li>
         </ul>
         <div className="row row2">
           {forecast.map(function (dailyForecast, index) {

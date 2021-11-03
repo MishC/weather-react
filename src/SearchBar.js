@@ -145,7 +145,6 @@ export default function SearchBar(prop) {
           temperature={weatherData.temperature}
           icon={weatherData.icon}
           description={weatherData.description}
-          precipitation={weatherData.precipitation}
           wind={weatherData.wind}
           humidity={weatherData.humidity}
           date={weatherData.date}

@@ -32,9 +32,6 @@ export default function Weather(props) {
         <div className="col-lg-4">
           <ul className="card-text">
             <li>
-              <h6>Precipitation: {props.precipitation} %</h6>
-            </li>
-            <li>
               <h6>Wind: {props.wind} m/s</h6>
             </li>
             <li>
