@@ -54,13 +54,13 @@ img.iconic {
 
   text-align: center;
   min-width: 175px;
-  padding: 20px 0px;
+  padding: 20px 0;
 }
 .row.row1 {
   --bs-gutter-x: 0;
   border: 1px solid #b1a9a9;
   border-radius: 0px;
-  padding: 0;
+  padding: 10px 0;
 }
 .row.row2 {
   --bs-gutter-x: 0;
