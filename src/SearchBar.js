@@ -129,7 +129,7 @@ export default function SearchBar(prop) {
               </div>
             </div>
 
-            <div className="col-2 col-xs-2 m-0 p-0 d-inline w-auto">
+            <div className="col-1 col-xs-auto m-0 p-0 d-inline w-auto">
               <input
                 type="submit"
                 id="search"

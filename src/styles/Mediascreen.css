@@ -27,10 +27,8 @@
   .container {
     width: 100%;
   }
-  #type {
-    min-width: 150px;
-    margin: 0px;
-    position: relative;
+  form {
+    margin: 0 auto;
   }
   .btn {
     position: relative;
@@ -86,11 +84,14 @@
     padding: 0 0 0 20px;
   }
   .SearchBar .col-5 {
-    max-width: 100%;
+    min-width: 65%;
+  }
+  .SearchBar .col-2 {
+    min-width: 20%;
   }
 }
 @media only screen and (max-width: 290px) {
   .SearchBar .row {
-    padding: 0;
+    padding: 10px;
   }
 }

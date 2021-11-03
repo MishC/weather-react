@@ -53,13 +53,13 @@ img.iconic {
 }
 .row.row1 {
   --bs-gutter-x: 0;
-  border: 1px solid #777171;
+  border: 1px solid #b1a9a9;
   border-radius: 0px;
   padding: 0;
 }
 .row.row2 {
   --bs-gutter-x: 0;
-  border: 1px solid #777171;
+  border: 1px solid #b1a9a9;
   border-radius: 0px;
   padding: 0;
 }

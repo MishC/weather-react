@@ -1,5 +1,5 @@
 ul.strip {
-  background: #777171;
+  background: #b1a9a9;
   font-weight: 600;
   color: #fff;
   margin: 0px;
@@ -45,12 +45,12 @@ span.country {
 }
 span.city:hover,
 span.country:hover {
-  color: rgb(242, 200, 200);
+  color: #1e1e1e;
 }
 
 span.units {
   vertical-align: super;
-  color: #777171;
+  color: #665050;
   font-size: 30px;
   padding: 0;
   margin: 0;
