@@ -115,7 +115,7 @@ export default function SearchBar(prop) {
       <div className="SearchBar">
         <form className="SearchBar" onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-5 col-xs-5 offset-lg-3 offset-md-2 offset-sm-2 col-xs-auto p-0">
+            <div className="col-5 offset-lg-3 offset-md-2 offset-sm-2 col-xs-5 p-0">
               <div className="form-group">
                 <input
                   type="search"
