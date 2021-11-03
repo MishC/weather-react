@@ -13,16 +13,19 @@
 }
 .SearchBar .form-control {
   min-width: 100%;
-  border-width: 2px;
+  border-width: 1px;
   border-color: #999992;
-  border-width: 2px;
+}
+.SearchBar .form-control:focus {
+  border-color: #9e9e95;
+  border-width: 1px;
 }
 .SearchBar .btn {
   background: #999992;
   color: rgb(255, 255, 255);
   margin: 0;
   font-weight: 600;
-  border-width: 2px;
+  border-width: 1px;
   border-color: #999992;
   vertical-align: middle;
   border-radius: 0%;
@@ -31,10 +34,14 @@
 .SearchBar .col-2 {
   flex: none;
 }
-.SearchBar .btn:hover,
 .SearchBar .btn:visited,
-.SearchBar .btn:active,
 .SearchBar .btn:focus {
+  border-color: #999992;
+  background: #999992;
+}
+.SearchBar .btn:active,
+.SearchBar .btn:hover {
+  border-color: #1e1e1e;
   background: #1e1e1e;
 }
 .Searchbar h3 {
