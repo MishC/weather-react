@@ -115,29 +115,20 @@ export default function SearchBar(prop) {
     return (
       <div className="SearchBar">
         <form className="SearchBar" onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-5 offset-lg-3 offset-md-2 offset-sm-2 col-xs-5 p-0">
-              <div className="form-group">
-                <input
-                  type="search"
-                  placeholder="Type a city"
-                  className="form-control shadow-sm"
-                  autoFocus="on"
-                  id="type"
-                  autoComplete="off"
-                  onChange={handleSearch}
-                />
-              </div>
-            </div>
-
-            <div className="col-1 col-xs-1 m-0 p-0 d-inline w-auto">
-              <input
-                type="submit"
-                id="search"
-                value="Search"
-                className="btn btn-success btn-rounded shadow-sm "
-              />
-            </div>
+          <div>
+            <input
+              type="search"
+              placeholder="Type a city"
+              className="form-control shadow-sm"
+              autoFocus="on"
+              autoComplete="off"
+              onChange={handleSearch}
+            />
+            <input
+              type="submit"
+              value="Search"
+              className="btn btn-success btn-rounded shadow-sm inline"
+            />
           </div>
         </form>
         <Weather

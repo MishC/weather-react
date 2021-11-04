@@ -66,32 +66,10 @@
   }
 }
 @media only screen and (max-width: 600px) {
-  .SearchBar .row {
-    padding: 0 0 0 50px;
-  }
   ul.card-text {
     display: block;
     margin: 0 auto;
     text-align: left;
     min-width: 190px;
-  }
-  #text {
-    text-align: left;
-  }
-}
-@media only screen and (max-width: 380px) {
-  .SearchBar .row {
-    padding: 0 0 0 20px;
-  }
-  .SearchBar .col-5 {
-    min-width: 65%;
-  }
-  .SearchBar .col-2 {
-    min-width: 20%;
-  }
-}
-@media only screen and (max-width: 290px) {
-  .SearchBar .row {
-    padding: 10px;
   }
 }
