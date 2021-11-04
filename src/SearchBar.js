@@ -115,7 +115,7 @@ export default function SearchBar(prop) {
     return (
       <div className="SearchBar">
         <form className="SearchBar" onSubmit={handleSubmit}>
-          <div className=" inline">
+          <div className="inline">
             <input
               type="search"
               placeholder="Type a city"
