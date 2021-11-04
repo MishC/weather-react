@@ -21,6 +21,7 @@ export default function SearchBar(prop) {
     country: "",
     city: "",
     coordinates: {},
+    winDeg: null,
   });
 
   /*_______________________________*/
@@ -99,7 +100,7 @@ export default function SearchBar(prop) {
       precipitation: Math.round(response.data.list[0].pop),
       wind: Math.round(response.data.list[0].wind.speed),
       humidity: response.data.list[0].main.humidity,
-
+      windDeg: Math.round(response.data.list[0].wind.deg),
       date: currentDate(now),
       coordinates: response.data.city.coord,
     });
@@ -148,6 +149,7 @@ export default function SearchBar(prop) {
           wind={weatherData.wind}
           humidity={weatherData.humidity}
           date={weatherData.date}
+          windDeg={weatherData.windDeg}
         />
         <Forecast coordinates={weatherData.coordinates} />
       </div>

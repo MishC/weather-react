@@ -32,10 +32,16 @@ export default function Weather(props) {
         <div className="col-lg-4">
           <ul className="card-text">
             <li>
-              <h6>Wind: {props.wind} m/s</h6>
+              <h6>
+                <span className="properties">Wind:</span>{" "}
+                <span className="values"> {props.wind} m/s</span>
+              </h6>
             </li>
             <li>
-              <h6>Humidity: {props.humidity}%</h6>
+              <h6>
+                <span className="properties">Humidity:</span>{" "}
+                <span className="values">{props.humidity}%</span>
+              </h6>
             </li>
           </ul>
         </div>

@@ -82,12 +82,27 @@ img.icon {
 .iconic {
   position: relative;
   top: -5px;
+  color: #1e1e1e;
+  opacity: 0.6;
 }
 .dispay-none {
   display: none;
 }
 .Weather .card-title {
   margin: 0px;
+}
+.Weather span.slash {
+  font-size: 22px;
+  position: relative;
+  top: -5px;
+}
+.Weather span.properties {
+  color: #1e1e1e;
+  opacity: 0.9;
+}
+.Weather span.values {
+  color: #1e1e1e;
+  opacity: 0.6;
 }
 
 @media only screen and (max-width: 800px) {

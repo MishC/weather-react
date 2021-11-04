@@ -38,7 +38,7 @@ export default function WeatherTemperature(props) {
             °C
           </a>
           {""}
-          <span>/</span>
+          <span class="slash">|</span>
           <a href="/" onClick={convertToFahrenheit} style={styleF}>
             °F
           </a>
