@@ -115,7 +115,7 @@ export default function SearchBar(prop) {
     return (
       <div className="SearchBar">
         <form className="SearchBar" onSubmit={handleSubmit}>
-          <div>
+          <div className=" inline">
             <input
               type="search"
               placeholder="Type a city"
@@ -127,7 +127,7 @@ export default function SearchBar(prop) {
             <input
               type="submit"
               value="Search"
-              className="btn btn-success btn-rounded shadow-sm inline"
+              className="btn btn-success btn-rounded shadow-sm"
             />
           </div>
         </form>

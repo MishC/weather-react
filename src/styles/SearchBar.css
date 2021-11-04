@@ -9,11 +9,9 @@
 }
 
 .SearchBar .form-control {
-  display: inline-flex;
-  max-width: 60%;
+  max-width: 100%;
   border-width: 1px;
   border-color: var(--branding-color);
-  text-align: center;
   margin: 0 auto;
 }
 .SearchBar .form-control:focus {
@@ -27,8 +25,6 @@
   border-width: 1px;
   border-color: var(--branding-color);
   margin-left: -2px;
-
-  margin-top: -4px;
 }
 .SearchBar .col-2 {
   flex: none;
