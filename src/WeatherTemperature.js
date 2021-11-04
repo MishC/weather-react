@@ -9,6 +9,7 @@ export default function WeatherTemperature(props) {
   useEffect(() => {
     setTemp(props.temperature);
     setStyleF({ color: "#1e1e1e", opacity: 0.4 });
+    setStyleC({ color: "#1e1e1e", opacity: 1 });
   }, [props.temperature]);
 
   function convertToFahrenheit(event) {

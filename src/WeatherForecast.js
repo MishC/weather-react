@@ -23,7 +23,6 @@ export default function WeatherForecast(props) {
     return weekDay;
   }
   function showDayInMonth(now) {
-    console.log(now.toUTCString().slice(5, 7));
     if (now.toUTCString().slice(5, 6) === "0") {
       return now.toUTCString().slice(6, 7);
     } else return now.toUTCString().slice(5, 7);
