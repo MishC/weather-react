@@ -58,23 +58,23 @@ const ExtendedWeather = ({ days, timeshifts }) => {
                     </td>
                   ) : (
                     <td key={period}>
-                      <div style={{ fontSize: "16px", color: "gray" }}>No data available</div>
+                      <div style={{ fontSize: "16px", color: "gray" }}>&nbsp;</div>
                     </td>
                   )
                 ))}
                 <td className="daily-weather-list-item__temperature ">
                   {!noData ? `${Math.round(Math.max(...arrDayT))}° / ${Math.round(Math.min(...arrDayT))}°` : (
-                    <div style={{ fontSize: "16px", color: "gray" }}>No data available</div>
+                    <div style={{ fontSize: "16px", color: "gray" }}>&nbsp;</div>
                   )}
                 </td>
                 <td className="daily-weather-list-item__precipitation ">
                   {!noData ? `${Math.round(Average(arrDayP))} mm` : (
-                    <div style={{ fontSize: "16px", color: "gray" }}>No data available</div>
+                    <div style={{ fontSize: "16px", color: "gray" }}>"No data available"</div>
                   )}
                 </td>
                 <td className="daily-weather-list-item__wind ">
                   {!noData ? `${Math.round(Average(arrDayW))} m/s` : (
-                    <div style={{ fontSize: "16px", color: "gray" }}>No data available</div>
+                    <div style={{ fontSize: "16px", color: "gray" }}>"No data available"</div>
                   )}
                 </td>
               </tr>
