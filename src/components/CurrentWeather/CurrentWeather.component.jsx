@@ -66,15 +66,14 @@ export default class CurrentWeather extends React.Component {
         i
       )}&language=en&key=AIzaSyDvQnTRBUjrJB2m1SsDlBZNxMgulpZCqfs`;
     });
-    console.log(urls1);
 
     let arrayOfTimeshifts = await Promise.all(urls1.map(this.getTimeOffset));
-    console.log(arrayOfTimeshifts);
 
     const resInitial = await axios.get(urls[0]);
 
     this.setState({
       ready: true,
+      timeShifts: arrayOfTimeshifts,
       summary:
         resInitial.data.properties.timeseries[0].data.next_1_hours.summary
           .symbol_code,
@@ -122,7 +121,6 @@ export default class CurrentWeather extends React.Component {
   handleSearch = (event) => {
     event.preventDefault();
     this.setState({ city: event.target.value });
-    // let urlCity = `https://nominatim.openstreetmap.org/search?q=${this.state.city}&format=geojson`;
   };
   ///
   handleSubmit = async (event) => {
@@ -146,8 +144,10 @@ export default class CurrentWeather extends React.Component {
     //console.log(urls1);
 
     let arrayOfTimeshifts = await Promise.all(urls2.map(this.getTimeOffset));
+
     this.setState({
       ready: true,
+      timeShifts: arrayOfTimeshifts,
       lon: response.data.features[0].geometry.coordinates[0],
       lat: response.data.features[0].geometry.coordinates[1],
       cityShow: response.data.features[0].properties.display_name,
@@ -181,6 +181,7 @@ export default class CurrentWeather extends React.Component {
       windSpeed,
       precipitation,
       days,
+      timeShifts,
       ready,
     } = this.state;
 
@@ -224,7 +225,7 @@ export default class CurrentWeather extends React.Component {
             <h4 className="text-left mt-4 pt-5 pl-1 pr-4">{windSpeed} m/s</h4>
           </div>
           <div>
-            <ExtendedWeather days={days} />
+            <ExtendedWeather days={days} timeshifts={timeShifts[0]} />
           </div>
         </div>
       );
