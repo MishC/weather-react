@@ -17,3 +17,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+# Future plans
+
+Get better of data collections of API as it will search for available data in nearby hours, not just get "next_6_hour" forecast, because in some cities data are not available in this array ("next_6_hour")
+
