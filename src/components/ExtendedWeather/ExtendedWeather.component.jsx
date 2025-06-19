@@ -4,16 +4,19 @@ import { Average } from "../../functions/Average";
 import WeatherImg from "../weatherImg/WeatherImg.component";
 import "./ExtendedWeather.styles.css";
 
-//import  {PartOfDay} from "../../functions/PartOfDay";
 const ExtendedWeather = ({ days, timeshifts }) => {
-  console.log(timeshifts > 7);
+  if (!days || !Array.isArray(days) || days.length < 5 || timeshifts === undefined) {
+    return (
+      <div style={{ fontSize: "16px", color: "gray" }}>No data available</div>
+    );
+  }
+
   return (
     <div className="ExtendedWeather mt-5 mx-4">
       <table className="table">
         <thead>
           <tr>
             <th scope="col"> </th>
-
             <th scope="col"> Night</th>
             <th scope="col">Morning</th>
             <th scope="col">Afternoon</th>
@@ -25,116 +28,54 @@ const ExtendedWeather = ({ days, timeshifts }) => {
         </thead>
         <tbody>
           {[...Array(5).keys()].map((i) => {
-            const arrDay = Object.entries(days[i]);
-
-            let arrDayT = arrDay.map((item) => {
-              if (item[1][0] === undefined) {
-                return "none";
-              }
-              return item[1][0].data.instant.details.air_temperature;
-            });
-            arrDayT = arrDayT.filter((i) => {
-              return i !== "none";
-            });
-
+            const arrDay = Object.entries(days[i] || {});
             let x = timeshifts > 7 ? 12 : 6;
             let y = `next_${x}_hours`;
 
-            //
+            let arrDayT = arrDay
+              .map((item) => item[1]?.[0]?.data?.instant?.details?.air_temperature)
+              .filter((v) => v !== undefined);
 
-            let arrDayP = arrDay.map((item) => {
-              if (item[1][0] === undefined) {
-                return "none";
-              }
-              return item[1][0].data["next_6_hours"].details
-                .precipitation_amount;
-            });
+            let arrDayP = arrDay
+              .map((item) => item[1]?.[0]?.data?.[y]?.details?.precipitation_amount)
+              .filter((v) => v !== undefined);
 
-            arrDayP = arrDayP.filter((i) => {
-              return i !== "none";
-            });
+            let arrDayW = arrDay
+              .map((item) => item[1]?.[0]?.data?.instant?.details?.wind_speed)
+              .filter((v) => v !== undefined);
 
-            ///////
-            let arrDayW = arrDay.map((item) => {
-              if (item[1][0] === undefined) {
-                return "none";
-              }
-              return item[1][0].data.instant.details.wind_speed;
-            });
-
-            arrDayW = arrDayW.filter((i) => {
-              return i !== "none";
-            });
-
-            if (Math.round(Math.max(...arrDayT)) === Infinity) {
-              arrDayT = 0;
-              arrDayP = "";
-
-              arrDayW = "";
-            }
+            const noData = arrDayT.length === 0 || arrDayP.length === 0 || arrDayW.length === 0;
 
             return (
               <tr key={i}>
-                {i === 0 ? (
-                  <th scope="row">Today {Dates(i)}</th>
-                ) : (
-                  <th scope="row"> {Dates(i)}</th>
-                )}
-                {days[i].night[0] !== undefined ? (
-                  <td>
-                    <WeatherImg
-                      summary={days[i].night[0].data[y].summary.symbol_code}
-                      key={Date.now()}
-                    />
-                  </td>
-                ) : (
-                  <td></td>
-                )}
-                {days[i].morning[0] !== undefined ? (
-                  <td>
-                    <WeatherImg
-                      summary={days[i].morning[0].data[y].summary.symbol_code}
-                      key={Date.now()}
-                    />
-                  </td>
-                ) : (
-                  <td></td>
-                )}
-                {days[i].afternoon[0] !== undefined ? (
-                  <td>
-                    <WeatherImg
-                      summary={days[i].afternoon[0].data[y].summary.symbol_code}
-                      key={Date.now()}
-                    />
-                  </td>
-                ) : (
-                  <td></td>
-                )}
-                {days[i].evening[0] !== undefined ? (
-                  <td>
-                    <WeatherImg
-                      summary={days[i].evening[0].data[y].summary.symbol_code}
-                      key={Date.now()}
-                    />
-                  </td>
-                ) : (
-                  <td></td>
-                )}
+                <th scope="row">{i === 0 ? `Today ${Dates(i)}` : Dates(i)}</th>
+                {["night", "morning", "afternoon", "evening"].map((period) => (
+                  days[i]?.[period]?.[0]?.data?.[y]?.summary?.symbol_code ? (
+                    <td key={period}>
+                      <WeatherImg
+                        summary={days[i][period][0].data[y].summary.symbol_code}
+                      />
+                    </td>
+                  ) : (
+                    <td key={period}>
+                      <div style={{ fontSize: "16px", color: "gray" }}>No data available</div>
+                    </td>
+                  )
+                ))}
                 <td className="daily-weather-list-item__temperature ">
-                  {Math.round(Math.max(...arrDayT)) !== Infinity
-                    ? `${Math.round(Math.max(...arrDayT))}°/
-                  ${Math.round(Math.min(...arrDayT))}°`
-                    : ""}
+                  {!noData ? `${Math.round(Math.max(...arrDayT))}° / ${Math.round(Math.min(...arrDayT))}°` : (
+                    <div style={{ fontSize: "16px", color: "gray" }}>No data available</div>
+                  )}
                 </td>
                 <td className="daily-weather-list-item__precipitation ">
-                  {typeof arrDayP !== "string"
-                    ? `${Math.round(Average(arrDayP))} mm`
-                    : ""}
+                  {!noData ? `${Math.round(Average(arrDayP))} mm` : (
+                    <div style={{ fontSize: "16px", color: "gray" }}>No data available</div>
+                  )}
                 </td>
                 <td className="daily-weather-list-item__wind ">
-                  {typeof arrDayW !== "string"
-                    ? `${Math.round(Average(arrDayW))} m/s`
-                    : ""}
+                  {!noData ? `${Math.round(Average(arrDayW))} m/s` : (
+                    <div style={{ fontSize: "16px", color: "gray" }}>No data available</div>
+                  )}
                 </td>
               </tr>
             );
@@ -144,4 +85,5 @@ const ExtendedWeather = ({ days, timeshifts }) => {
     </div>
   );
 };
+
 export default ExtendedWeather;
